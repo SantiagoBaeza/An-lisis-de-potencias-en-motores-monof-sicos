@@ -10,26 +10,19 @@ El objetivo es determinar qué motor presenta el mayor valor de P y, al mismo ti
 
 ## Contexto
 
-Este ejercicio fue parte de un examen recuperatorio de **Informática II – UTN (2025)**.  
-Se nos entregaron tres archivos (`motor1.dat`, `motor2.dat`, `motor3.dat`) con registros de tensión, corriente y tiempo.  
-El desafío consistió en implementar un algoritmo que leyera los datos, calculara las potencias según las fórmulas dadas, y comparara los resultados entre los tres motores.
+Se trabajó con tres archivos (`motor1.dat`, `motor2.dat`, `motor3.dat`) que contenían registros de tensión, corriente y tiempo.  
+El objetivo fue implementar un algoritmo que leyera los datos, calculara la **potencia activa (P)** y la **potencia aparente (S)** según las fórmulas dadas, y luego comparara los resultados entre los tres motores para identificar cuál cumplía la condición de mayor P y menor S. (tristemente los archivos .dat los perdí, sin embargo vale la pena analizar el fucionamiento del algoritmo)
 
 Las fórmulas utilizadas fueron:
 
-- **Potencia activa (P):**  
-  \[
-  P = \frac{1}{t_{max} - t_{min}} \sum_{i=0}^{N} V_i \cdot C_i
-  \]
+- **Potencia activa (P):**
+- ![Potencia activa (P):](https://github.com/SantiagoBaeza/An-lisis-de-potencias-en-motores-monof-sicos/blob/main/01%20formula%20potencia%20activa%20.jpg)
 
 - **Potencia aparente (S):**  
-  \[
-  S = V_{RMS} \cdot C_{RMS}
-  \]
+  La potencia Aparente (S) resulta de multiplicar la tenison RMS por la corriente RMS.
 
 - **Valor RMS de una magnitud X:**  
-  \[
-  X_{RMS} = \sqrt{\frac{1}{t_{max} - t_{min}} \sum_{i=0}^{N} (X_i)^2}
-  \]
+  ![Valor RMS de una magnitud X](https://github.com/SantiagoBaeza/An-lisis-de-potencias-en-motores-monof-sicos/blob/main/02%20formula%20Valor%20RMS%20de%20la%20magnitud%20X.jpg)
 
 ---
 
@@ -61,7 +54,7 @@ Las fórmulas utilizadas fueron:
 
 ---
 
-## Funcionalidad clave
+## Funcionalidad
 
 - Lectura de archivos binarios con `fread`.  
 - Uso de estructuras (`struct datos`) para organizar la información.  
